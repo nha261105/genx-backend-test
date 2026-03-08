@@ -1,12 +1,13 @@
-import express, { Request, Response} from 'express'
+import express, { Request, Response } from "express";
 
-import scheduleRouter from "./routes/ScheduleRoutes.js"
-export const app = express()
+import scheduleRouter from "./routes/ScheduleRoutes.js";
+import InvoiceRouter from "./routes/InvoiceRouters.js";
+export const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
 app.use("/schedule", scheduleRouter);
-
-app.get('/ping', (res: Response) => {
-    res.status(200).json({message: 'Server is running!'})
+app.use("/invoice", InvoiceRouter);
+app.get("/ping", (req: Request, res: Response) => {
+  res.status(200).json({ message: "Server is running!" });
 });
