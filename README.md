@@ -170,10 +170,10 @@ curl -X POST http://localhost:3000/invoice/calc \
 
 **Giải thích:**
 
-- `subtotal = basePrice × months = 1,000,000 × 3 = 3,000,000`
-- `discount = floor(subtotal × 10%) = 300,000` (SAVE10)
-- `refund = canceledClasses × refundPerClass = 2 × 50,000 = 100,000`
-- `total = subtotal - discount - refund = 2,600,000`
+- `subtotal = basePrice × months = 1.000.000 × 3 = 3.000.000`
+- `discount = floor(subtotal × 10%) = 300.000` (SAVE10)
+- `refund = canceledClasses × refundPerClass = 2 × 50.000 = 100.000`
+- `total = subtotal - discount - refund = 2.600.000`
 
 ---
 
